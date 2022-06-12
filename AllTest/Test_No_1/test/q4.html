@@ -1,0 +1,38 @@
+Title: Dynamic Game of Arrays
+
+Meta-Tags: Javascript, JS, interview, questions, interview questions,functions,arrays,practice
+
+Description: Find output of the following:
+
+let arr = [1, 2, 3]; 
+(function () 
+{ for (x in arr) arr.unshift(arr.pop()); 
+    console.log(arr); })();
+
+let randomAdder = function (arr = ["a", "b"]) { arr[arr.length * arr.length] = arr.length * arr.length; };
+
+randomAdder(arr); randomAdder();
+
+console.log(arr[9]); console.log(arr[8]);      
+
+Options:
+
+A)
+[ 3, 2, 1 ] 9 ["a", "b"]         1. let pop = arr(pop);
+                                     arr.unshift(pop);
+                                       312  , 231  , 123
+                                       console = 123  
+B)
+[ 3, 2, 1 ] 9 undefined
+
+C)                              2. random randomAdder(arr) = arr(3*3) = 3*3;
+                                     arr(9) = 9
+[ 1, 2, 3 ] 9 ["a", "b"]
+
+D)
+[ 1, 2, 3 ] 9 undefined          3. arr = [1,2,3,4,5,6,7,8,9]
+                                       arr(9) he difined hae baki ke arr(8) is undefined
+Solution: D
+
+
+
