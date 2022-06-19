@@ -25,7 +25,8 @@ const code = require('./code');
 (async function(){
     let browser = await puppeteer.launch({ headless: false, defaultViewport: null,args: ['--start-fullscreen'] });
     let page = await browser.newPage();
-    await page.goto('https://www.hackerrank.com/');
+    //await page.goto('https://www.hackerrank.com/');
+    await page.goto('https://www.geeksforgeeks.org/');
     await waitAndClick('ul.menu a',page);
     await page.waitForSelector(".fl-module-content.fl-node-content .fl-button");
     await page.evaluate(function(){

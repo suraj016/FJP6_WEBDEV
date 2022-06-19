@@ -1,0 +1,25 @@
+1. Array methods
+2. var, let and const
+3."this" keyword
+4. Functions ( arrow functions, function expressions, IIFE etc)
+5. Hoisting
+6. Objects (Object referencing , copying, cloning)
+7. callbacks
+8. map, filter and reduce
+9. Promises , async/await
+10. call, bind, apply
+11. setTimeout v/s setInterval
+12. Scopes
+13. Event loop and execution context
+14. Functions ( Higher order, First class, Pure Functions, Function composition)
+15. Currying
+16. Debouncing/Throttling
+17. Memoization
+18. Micro/macro tasks
+19. Closures
+20. Prototypal inheritance
+21. Event Emitters
+22. Event bubbling/capturing/delegation
+23. Local and Session storage
+24. Different type of rendering.
+25. Compose
