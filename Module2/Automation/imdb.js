@@ -7,12 +7,8 @@ const pass = "abcdef";
 (async function(){
     let browser = await puppeteer.launch({ headless: false, defaultViewport: null,args: ['--start-fullscreen'] });
     let page = await browser.newPage();
-    await page.goto('https://www.geeksforgeeks.org/');
-    await waitAndClick('[class="header-main__signup login-modal-btn"]',page);
+    await page.goto('https://www.imdb.com/');
+   
 })();
 
 
-async function waitAndClick(selector,page){
-    await page.waitForSelector(selector);
-    await page.click(selector);
-}
