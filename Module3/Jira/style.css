@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.toolbox-cont{
+    height: 7rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+/* Dispalyflex jispe be lgana hota hae uske parent ko dena hota hae taki ke child element align ho jaye */
+
+.toolbox-priority-cont{
+    height: 5rem;
+    background-color: blue;
+    width:20rem;
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.action-button-cont{
+    background-color: rgb(247, 76, 8);
+   height: 5rem;
+   width: 20rem;
+   margin-left: 5rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.color{
+    height: 2rem;
+    width: 3rem;
+    background-color: aliceblue;
+    margin-left: 1.5rem;
+   
+   
+}
+
+.lightpink{
+    background-color: lightsalmon;
+}
+.green{
+    background-color: green;
+}
+.brown{
+    background-color: brown;
+}
+.black{
+    background-color: black;
+}
+
+.add-btn{
+    font-size: 2.5rem;
+}
+.remove-btn{
+    font-size: 2.5rem;
+}
+
