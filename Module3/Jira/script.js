@@ -1,5 +1,5 @@
-let addBtn = document.querySelector(".add-btn");
-let modal = document.querySelector(".modal-cont");
+let addBtn = document.querySelector(".add-btn");     // isse button select ho jaega
+let modal = document.querySelector(".modal-cont");     
 let addModal = true;
 addBtn.addEventListener("click", function(){
     // console.log("Button is clicked");
