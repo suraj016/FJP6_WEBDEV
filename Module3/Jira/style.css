@@ -67,12 +67,15 @@ body{
 
 
 .modal-cont{
+    position: absolute;
+    left: 25vw;
+    top: 25vh;
 background-color: chartreuse;
 height: 50vh;
 width: 50vw;
+ 
 display: none;
-margin-left: 24rem;
-margin-top: 7rem;
+
 }
 .textarea-cont{
  outline: none;
@@ -104,7 +107,7 @@ margin-top: 7rem;
  justify-content: space-around;
  flex-wrap: wrap;
  gap: 2rem;
- background-color: darkolivegreen ;
+ 
 }
 .ticket-cont{
     background-color: rgb(79, 85, 124);
