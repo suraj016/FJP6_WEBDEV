@@ -4,6 +4,7 @@ let taskArea = document.querySelector(".textarea-cont");
 let mainCont =  document.querySelector(".main-cont");
 let allPriorityColor =  document.querySelectorAll(".priority-color");
 let addModal = true;
+let modalPriorityColor = 'black';
 addBtn.addEventListener("click", function(){
     // console.log("Button is clicked");
     // modal.style.display = "flex";
@@ -20,7 +21,12 @@ addBtn.addEventListener("click", function(){
 for(let  i = 0; i < allPriorityColor.length; i++){
     let PriorityDivOneColor = allPriorityColor[i];
     PriorityDivOneColor.addEventListener("click", function(){
+        for( let j = 0; j < allPriorityColor.length; j++){
+            allPriorityColor[j].classList.remove("active");
+        }
         PriorityDivOneColor.classList.add("active");
+        modalPriorityColor = PriorityDivOneColor.classList[0];
+       
 })
 }
 
@@ -39,20 +45,14 @@ if(key == 'Enter'){
 
 
 
-function createTicket(task){
-    // 
-    
-//     <div class="ticket-cont">
-//     <div class="ticket-color black"></div>
-//     <div class="ticket-id">#dfrwgv443</div>
-//     <div class="task-area">Task</div>
-//   </div>
+function createTicket(ticketColor,task){
+   
 
 
 let ticketCont = document.createElement("div");
 ticketCont.setAttribute('class','ticket-cont' );
 ticketCont.innerHTML = `<div class="ticket-cont">
-                 <div class="ticket-color black"></div>
+                 <div class="ticket-color ${ticketColor}"></div>
                  <div class="ticket-id">#dfrwgv443</div>
                  <div class="task-area">${task}</div>
                  </div>`
