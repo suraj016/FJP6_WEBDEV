@@ -1,9 +1,16 @@
-let addBtn = document.querySelector(".add-btn");     // isse button select ho jaega
-let modal = document.querySelector(".modal-cont");   
+let addBtn = document.querySelector(".add-btn");    // isse button select ho jaega
+let info1 =  document.querySelector(".info"); 
+
+let modal = document.querySelector(".modal-cont"); 
+let modal1 =  document.querySelector(".modals-cont"); 
 let taskArea = document.querySelector(".textarea-cont"); 
+let taskArea1 = document.querySelector(".textarearinfo-cont");
 let mainCont =  document.querySelector(".main-cont");
 let allPriorityColor =  document.querySelectorAll(".priority-color");
 let addModal = true;
+let addModal1 = true;
+let removeFLag  = false;
+let removeBtn = document.querySelector(".remove-btn");
 let modalPriorityColor = 'black';
 addBtn.addEventListener("click", function(){
     // console.log("Button is clicked");
@@ -18,6 +25,23 @@ addBtn.addEventListener("click", function(){
     addModal = !addModal;
 }) 
 
+// code 2
+
+info1.addEventListener("click", function(){
+    // console.log("Button is clicked");
+
+    taskArea1.value = " Jira  App is a kind of app that generally used to maintain our day-to-day tasks or list everything that we have to do, with the most important tasks at the top of the list, and the least important tasks at the bottom. It is helpful in planning our daily schedules.  Benefits of a JIRA are Increases productivity , Provides motivation , Improves memory";
+    // modal.style.display = "flex";
+    if(addModal1){
+        // show modal
+        modal1.style.display = "flex";
+    }else{
+        // hide modal
+        modal1.style.display = "none";
+    }
+    addModal1 = !addModal1;
+}) 
+
 for(let  i = 0; i < allPriorityColor.length; i++){
     let PriorityDivOneColor = allPriorityColor[i];
     PriorityDivOneColor.addEventListener("click", function(){
@@ -25,7 +49,7 @@ for(let  i = 0; i < allPriorityColor.length; i++){
             allPriorityColor[j].classList.remove("active");
         }
         PriorityDivOneColor.classList.add("active");
-        modalPriorityColor = PriorityDivOneColor.classList[0];
+        modalPriorityColor = PriorityDivOneColor.classList[0]; 
        
 })
 }
@@ -36,7 +60,7 @@ let key = e.key;
 //console.log(key);
 
 if(key == 'Enter'){
-   createTicket(taskArea.value);
+   createTicket( modalPriorityColor, taskArea.value);
     taskArea.value = "";
    modal.style.display = "none";
   addModal  = !addModal; 
@@ -45,7 +69,34 @@ if(key == 'Enter'){
 
 
 
-function createTicket(ticketColor,task){
+// code 2
+
+modal1.addEventListener('keydown',function(e){
+   // let key = e.key;
+  // taskArea1.value = "lordskjnfjsndjvn njvxcjnvire jncjvifjnkjvnjnxcjv jncxjvndf";
+  // modal.style.display = "none";
+
+  
+  
+    addModal1 = !addModal1; 
+    
+})
+
+
+removeBtn.addEventListener("click",function(){
+    if(removeFLag){
+        removeBtn.style.color = "black";
+    }else{
+        removeBtn.style.color = "red"
+    }
+
+    removeFLag = !removeFLag
+})
+
+
+
+
+function createTicket( ticketColor,task){
    
 
 
@@ -58,7 +109,19 @@ ticketCont.innerHTML = `<div class="ticket-cont">
                  </div>`
 
 
-    mainCont.appendChild(ticketCont);             
+    mainCont.appendChild(ticketCont);   
+
+
+    // handling delte
+    
+    ticketCont.addEventListener("click",function(){
+        if(removeFLag)
+        ticketCont.remove()
+    })
+
+    
+         
+    
 
 
 
