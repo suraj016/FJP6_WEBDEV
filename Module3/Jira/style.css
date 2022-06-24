@@ -11,9 +11,10 @@ body{
     background-color: #11999E;
     display: flex;
     align-items: center;
+    
 }
 
-/* Dispalyflex jispe be lgana hota hae uske parent ko dena hota hae taki ke child element align ho jaye */
+/* Dispaly flex jispe be lgana hota hae uske parent ko dena hota hae taki ke child element align ho jaye */
 
  .toolbox-priority-cont{
     height: 5rem;

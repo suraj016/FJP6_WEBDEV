@@ -11,6 +11,7 @@ let addModal = true;
 let addModal1 = true;
 let removeFLag  = false;
 let removeBtn = document.querySelector(".remove-btn");
+let color = ['lightpink' , 'brown' , 'green', 'black']
 let modalPriorityColor = 'black';
 addBtn.addEventListener("click", function(){
     // console.log("Button is clicked");
@@ -112,7 +113,7 @@ ticketCont.innerHTML = `<div class="ticket-cont">
     mainCont.appendChild(ticketCont);   
 
 
-    // handling delte
+    // handling delete
     
     ticketCont.addEventListener("click",function(){
         if(removeFLag)
@@ -123,6 +124,6 @@ ticketCont.innerHTML = `<div class="ticket-cont">
          
     
 
-
+   // handle color
 
 }
