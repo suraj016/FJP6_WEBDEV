@@ -173,10 +173,17 @@ height: 1rem;
 background-color: #DF7861;
 }
 .task-area{
-height: 8rem;
+height: 6rem;
 padding: 7px;
 font-size: 1.25rem;
 } 
+
+
+.lock-unlock{
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    padding-left: 18rem;
+}
 
 
 

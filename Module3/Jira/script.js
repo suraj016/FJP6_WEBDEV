@@ -107,7 +107,7 @@ ticketCont.innerHTML = `<div class="ticket-cont">
                  <div class="ticket-color ${ticketColor}"></div>
                  <div class="ticket-id">#dfrwgv443</div>
                  <div class="task-area">${task}</div>
-                 </div>`
+                 <div class="lock-unlock"><i class="fa fa-lock"></i></div>`
 
 
     mainCont.appendChild(ticketCont);   
@@ -126,7 +126,7 @@ ticketCont.innerHTML = `<div class="ticket-cont">
 
    // handle color
 
-   let ticketColorBand = ticketCont.querySelector(".ticket-color");
+   let ticketColorBand = ticketCont .querySelector(".ticket-color");
    ticketColorBand.addEventListener("click" , function(){
      
     let currentTicketcolor = ticketColorBand.classList[1];
