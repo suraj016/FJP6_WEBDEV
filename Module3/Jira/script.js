@@ -77,9 +77,8 @@ modal1.addEventListener('keydown',function(e){
   // taskArea1.value = "lordskjnfjsndjvn njvxcjnvire jncjvifjnkjvnjnxcjv jncxjvndf";
   // modal.style.display = "none";
 
-  
-  
     addModal1 = !addModal1; 
+    
     
 })
 
