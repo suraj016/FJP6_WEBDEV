@@ -11,8 +11,9 @@ let addModal = true;
 let addModal1 = true;
 let removeFLag  = false;
 let removeBtn = document.querySelector(".remove-btn");
-let color = ['lightpink' , 'brown' , 'green', 'black']
-let modalPriorityColor = 'black';
+let color = ['lightpink' , 'brown' , 'green', 'black'];
+let modalPriorityColor = color[color.length-1];  // color ke order maintain karne ke liye
+
 addBtn.addEventListener("click", function(){
     // console.log("Button is clicked");
     // modal.style.display = "flex";
@@ -124,5 +125,30 @@ ticketCont.innerHTML = `<div class="ticket-cont">
     
 
    // handle color
+
+   let ticketColorBand = ticketCont.querySelector(".ticket-color");
+   ticketColorBand.addEventListener("click" , function(){
+     
+    let currentTicketcolor = ticketColorBand.classList[1];
+    let currentTicketcolorIdx = -1;
+    for(let i = 0; i < color.length; i++){
+        if(currentTicketcolor == color[i]){
+            currentTicketcolorIdx = i;
+            break;
+        }
+    }
+
+    let nextColorIdx = (currentTicketcolorIdx+1)%color.length;
+    let nextColor = color[nextColorIdx];
+
+    ticketColorBand.classList.remove(currentTicketcolor);
+    ticketColorBand.classList.add(nextColor);
+
+
+
+   })
+    
+
+
 
 }
