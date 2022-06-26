@@ -105,12 +105,34 @@ let ticketCont = document.createElement("div");
 ticketCont.setAttribute('class','ticket-cont' );
 ticketCont.innerHTML = `<div class="ticket-cont">
                  <div class="ticket-color ${ticketColor}"></div>
-                 <div class="ticket-id">#dfrwgv443</div>
+                 <div class="ticket-id">#${id}</div>
                  <div class="task-area">${task}</div>
-                 <div class="lock-unlock"><i class="fa fa-lock"></i></div>`
+                 <div class="lock-unlock"><i class="fa fa-unlock"></i></div>`
 
 
-    mainCont.appendChild(ticketCont);   
+    mainCont.appendChild(ticketCont);  
+    
+    
+    // lock un lock handle
+
+    let lockUnlockBtn = ticketCont.querySelector(".lock-unlock i");
+    let ticketTaskArea = ticketCont.querySelector(".task-area");
+    lockUnlockBtn.addEventListener("click", function () {
+        if (lockUnlockBtn.classList.contains("fa-lock")) {
+            lockUnlockBtn.classList.remove("fa-lock");
+            lockUnlockBtn.classList.add("fa-unlock");
+            ticketTaskArea.setAttribute("contenteditable", "true");
+        } else {
+            lockUnlockBtn.classList.remove("fa-unlock");
+            lockUnlockBtn.classList.add("fa-lock");
+            ticketTaskArea.setAttribute("contenteditable", "false");
+        }
+
+        //update ticketArr
+        let ticketIdx = getTicketIdx(id);
+        ticketArr[ticketIdx].task = ticketTaskArea.textContent;
+        updateLocalStorage();
+    })
 
 
     // handling delete
