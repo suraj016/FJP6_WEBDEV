@@ -1,105 +1,88 @@
 let fs = require("fs");
-  // INPUT
-let inputArr = process.argv.slice(2);   
+// input
+let inputArr = process.argv.slice(2);
 // console.log(inputArr);
- 
-// OPTION
-
-let optionArr = [];
-let fileArr = [];
-
-// IDENTIFIER
-
-for(let i = 0; i < inputArr.length; i++){
+// options
+let optionsArr = [];
+let filesArr = [];
+// identify -> options
+for (let i = 0; i < inputArr.length; i++) {
     let firstChar = inputArr[i].charAt(0);
-    if(firstChar == "-"){
-        optionArr.push(inputArr[i])
-    }else{
-        fileArr.push(inputArr[i]);
+    if (firstChar == "-") {
+        optionsArr.push(inputArr[i]);
+    } else {
+        filesArr.push(inputArr[i]);
+
+    }
+
+
+}
+// options check
+let isBothPresent = optionsArr.includes("-b") && optionsArr.includes("-n");
+if (isBothPresent==true) {
+    console.log("either enter -n or -b option");
+    return;
+}
+// existence
+for (let i = 0; i < filesArr.length; i++) {
+    //    /buffer
+    let isPresent = fs.existsSync(filesArr[i]);
+    if (isPresent == false) {
+        console.log(`file ${filesArr[i]} is not present`);
+        return;
     }
 }
-
-// READ
-
-//         Method 1
-
-// let buffer = "";
-// for(let i = 0;  i < inputArr.length; i++){
-//     let FileContent = fs.readFileSync(inputArr[i]);
-//     buffer += FileContent + "\n";
-// }
-
-// console.log(buffer);
-
-
-//         Method 2  
-
-let content  = "";
-for(let i = 0;  i < fileArr.length; i++){
-    let bufferContent = fs.readFileSync(fileArr[i]);
-    content += bufferContent + "\n";
+// read
+let content = "";
+for (let i = 0; i < filesArr.length; i++) {
+    //    /buffer
+    let bufferContent = fs.readFileSync(filesArr[i]);
+    content += bufferContent + "\r\n";
 }
-
-console.log(content);
-
-// node .\wcat.js file1.txt file2.txt   -----> command for printing the content inside the both files
-
-
+// console.log(content)
 let contentArr = content.split("\r\n");
-//console.log(contentArr); 
-
-
-let isSPresent =  optionArr.includes("-s");
-if(isSPresent == true){
-    for(let i = 1; i < contentArr.length; i++){
-        if(contentArr[i] == ""&&contentArr[i-1]==""){
+// console.log(contentArr);
+// -s 
+let isSPreset = optionsArr.includes("-s");
+if (isSPreset == true) {
+    for (let i = 1; i < contentArr.length; i++) {
+        if (contentArr[i] == "" && contentArr[i - 1] == "") {
             contentArr[i] = null;
-        }else if(contentArr[i] == ""&&contentArr[i-1]==null){
+        } else if (contentArr[i] == "" && contentArr[i - 1] == null) {
             contentArr[i] = null;
         }
     }
-
     let tempArr = [];
-
-    for(let i = 0; i < contentArr.length; i++){
-        if (contentArr[i] != null){
+    for (let i = 0; i < contentArr.length; i++) {
+        if (contentArr[i] != null) {
             tempArr.push(contentArr[i])
         }
     }
-    contentArr = tempArr ;
+    contentArr = tempArr;
 }
-
-console.log("..........................");
-//console.log(contentArr.join("\n"));
-
-
-let isNPresent = optionArr.includes("-n");
-if(isNPresent == true){
-    for(let i = 0; i < contentArr.length; i++){
-        contentArr[i] = `${i+1} ${contentArr} `;
-       
+console.log("```")
+// console.log(contentArr.join("\n"));
+let isNPresent = optionsArr.includes("-n");
+if (isNPresent == true) {
+    for (let i = 0; i < contentArr.length; i++) {
+        contentArr[i] = `${i + 1} ${contentArr[i]} `;
     }
 }
+// console.log(contentArr.join("\n"));
+let isBPresent = optionsArr.includes("-b");
+if (isBPresent == true) {
 
-//console.log(contentArr.join("\n"));
-
-
-let isBPresent = optionArr.includes("-n");
-if(isNPresent == true){
-    for(let i = 0; i < contentArr.length; i++){
-
-        let counter = 1;
-
-        if(contentArr[i] != ""){
-           // contentArr[i] = `${i+1} ${contentArr} `;
-            contentArr[i] =  `${counter} ${contentArr[i]} `
+    let counter = 1
+    for (let i = 0; i < contentArr.length; i++) {
+        if (contentArr[i] != "") {
+            // contentArr[i] = `${i + 1} ${contentArr[i]} `;
+            contentArr[i] = `${counter} ${contentArr[i]}`;
             counter++;
         }
-       
-       
     }
 }
 console.log(contentArr.join("\n"));
+
 
 
 
