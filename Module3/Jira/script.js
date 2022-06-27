@@ -105,7 +105,7 @@ let ticketCont = document.createElement("div");
 ticketCont.setAttribute('class','ticket-cont' );
 ticketCont.innerHTML = `<div class="ticket-cont">
                  <div class="ticket-color ${ticketColor}"></div>
-                 <div class="ticket-id">#${id}</div>
+                 <div class="ticket-id">#dsjc23n24</div>
                  <div class="task-area">${task}</div>
                  <div class="lock-unlock"><i class="fa fa-unlock"></i></div>`
 
