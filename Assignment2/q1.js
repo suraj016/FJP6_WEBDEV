@@ -4,7 +4,7 @@ let arr = [1, 2, 3, 4];
 
 function f(arr) {
     for (x in arr) {
-        arr[x] = 0
+        arr[x] = 0   // array mae changes kar diya
     }
     return arr;
 }
@@ -16,6 +16,7 @@ console.log(g(arr));
 console.log(arr);
 
 //solution 
+
 function g(arr){
     let nArr = [];
     for(x in arr){
