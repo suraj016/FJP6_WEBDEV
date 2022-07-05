@@ -21,6 +21,9 @@ let obj = {
   // f(obj);
   
   // Solution:
+
+  // pure bnane ke liye new obj chaiye
+  
   
   
   function g(obj,cb){
