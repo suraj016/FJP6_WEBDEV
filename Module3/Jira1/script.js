@@ -209,3 +209,8 @@ function updateLocalStorage(){
     let stringifyArr = JSON.stringify(ticketArr);
     localStorage.setItem("tickets",stringifyArr);
 }
+
+
+
+// local storage can save max 4 to 5 mb of data
+// key and value should be string
