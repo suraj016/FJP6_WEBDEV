@@ -80,7 +80,7 @@ let obj = {
 
 // console.log(obj2.name);
 // console.log(obj2.address);
-
+ 
 // spread operator ke madad se agar obj copy kiya hae tho
 // uski bas first level wali keys he copy hongi who refrence ko he point out karenge
 
