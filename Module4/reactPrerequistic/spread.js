@@ -63,27 +63,35 @@ let obj = {
 // square bracket - []  array
 
 
-let obj2 = {...obj};
-obj2.name = "Rohit";
+// let obj2 = {...obj};
+// obj2.name = "Rohit";
 
-// obj2.address = {country : "china",
-//                  state : "bihar",
-//                 pincode : 222222    }
+// // obj2.address = {country : "china",
+// //                  state : "bihar",
+// //                 pincode : 222222    }
 
-obj2.address.country = "China";
+// obj2.address.country = "China";
 
 
-console.log(obj.name);
-console.log(obj.address);
+// console.log(obj.name);
+// console.log(obj.address);
 
-console.log("*****************");
+// console.log("*****************");
 
-console.log(obj2.name);
-console.log(obj2.address);
+// console.log(obj2.name);
+// console.log(obj2.address);
 
 // spread operator ke madad se agar obj copy kiya hae tho
 // uski bas first level wali keys he copy hongi who refrence ko he point out karenge
 
 
 // shallow copy and deep copy
+
+
+// deep copy
+let  obj3  = JSON.parse(JSON.stringify(obj));
+obj3.address.country = "asia";
+console.log(obj.address.country);
+console.log(obj3.address.country);
+
 
