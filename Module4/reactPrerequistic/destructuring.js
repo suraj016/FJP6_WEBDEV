@@ -24,6 +24,8 @@ let obj = {
 let {name, pincode} = obj;
 // 
 let v = 23;
+let k = 45;
+
 
 
 
