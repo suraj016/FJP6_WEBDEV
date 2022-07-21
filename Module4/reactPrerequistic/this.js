@@ -1,0 +1,1 @@
+console.log(this);  /// THIS WILL GIVE EMPTY OBJECT
