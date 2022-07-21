@@ -1,3 +1,5 @@
+//                 IN CASE OF ARRAY
+
 // let arr = [1,23,4];
 
 // let a  = arr[0];
@@ -14,17 +16,25 @@
 // console.log(d);   // default case
 
 
+//             IN CASE OF OBJECT
+
+
 
 let obj = {
-    name  : "Adam",
+    name  : "Adam Kumar",
     state : "New York",
     pincode : 132332
 }
 
-let {name, pincode} = obj;
-// 
-let v = 23;
-let k = 45;
+// let {name, pincode} = obj;
+// console.log(name);
+// console.log(pincode);
+
+
+let {state , name:firstName} = obj;
+console.log(firstName);
+console.log(state);
+
 
 
 

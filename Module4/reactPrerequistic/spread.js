@@ -85,7 +85,7 @@ let obj = {
 // uski bas first level wali keys he copy hongi who refrence ko he point out karenge
 
 
-// shallow copy and deep copy
+//     imp questions -> shallow copy and deep copy
 
 
 // deep copy
@@ -93,10 +93,6 @@ let  obj3  = JSON.parse(JSON.stringify(obj));
 obj3.address.country = "asia";
 console.log(obj.address.country);
 console.log(obj3.address.country);
-//hguh
-
-
-// this is bussiness
 
 
 
