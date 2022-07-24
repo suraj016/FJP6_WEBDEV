@@ -29,3 +29,6 @@ obj.def();   // METHOD INVOCATION
 
 // let ghi = obj.def;
 // ghi();   // FUNCTION INVOCATION
+
+
+// FUNCTION INVOCATION
