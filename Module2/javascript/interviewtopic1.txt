@@ -1,0 +1,35 @@
+Question 1:- Why do we call javascript as dynamic language?
+3:54 Question 2:- how does javascript determine data types ?
+4:44 Question 3:- What is typeof functions?
+4:44 Question 4:- How to check data type in javascript ?
+5:21 Question 5:- What are different datatypes in Javascript ? 
+7:51 Question 6:- Explain Undefined Data types ? 
+8:36 Question 7:- What is Null ?
+9:02 Question 8:- Differentiate between Null and Undefined ?
+9:41 Question 9:- Explain Hoisting ?
+10:51 Question 10:- Are Javascript initialization hoisted ?
+11:39 Question 11:- What are global variables ?
+12:06 Question 12:- What are the issues with Global variables ?
+12:30 Question 13:- What happens when you declare variable with out VAR ?
+13:30 Question 14:- What is Use Strict ?
+13:30 Question 15:- How to force developers to use Var keyword ?
+14:26 Question 16:- How can we handle Global Variables ?
+14:26 Question 17:- How can we avoid Global variables ?
+16:14 Question 18:- What are Closures ?
+19:16 Question 19:- Why do we need Closures ?
+22:52 Question 20:- Explain IIFE ?
+24:40 Question 21:- What is the use of IIFE ?
+24:40 Question 22:- What is name collision in global scope ?
+24:40 Question 23:- IIFE vs Normal Function?
+28:12 Question 24:- What are design patterns ?
+28:52 Question 25:- Which is the most used design pattern?
+29:03 Question 26:- What is module Pattern and revealing module pattern ?
+33:57 Question 27:- What are the various ways to create JavaSCript objects?
+35:55 Question 28:- How can we do inheritance in Javascript ?
+35:55 Question 29:- What is prototype in Javascript ?
+35:55 Question 30:- Explain Prototype chaining ?
+43:41 Question 31:- What is Let Keyword?
+45:52 Question 32:- Are Let variables hoisted ?
+48:27 Question 33:- Explain Temporal Dead Zone ?
+51:28 Question 34:- Let vs Var
+58:12 Question 35:- String Concantentation and Arthimetic puzzle
