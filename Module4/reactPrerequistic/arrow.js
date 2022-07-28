@@ -14,11 +14,31 @@
 // add(23,4);
 
 
-let arrowfunction =  ()=>{
-console.log(this);
-}
+// let arrowfunction =  ()=>{
+// console.log(this);
+// }
 
-arrowfunction();
+// arrowfunction();
 
 // arrow function ke andar jo this hota hae who uske outer
 // scope mae kon sa function hae who hota hae
+
+
+
+let obj = {
+    name : "Aman",
+    age: 23,
+    showDetail:function(){
+        console.log(this.name+" "+this.age);
+    },
+    showDetailArrow:()=>{
+        console.log(this.name+" "+this.age);
+    }
+
+
+}
+
+//obj.showDetail();
+obj.showDetailArrow();
+
+
