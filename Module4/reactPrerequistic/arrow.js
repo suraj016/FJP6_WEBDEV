@@ -38,7 +38,9 @@ let obj = {
 
 }
 
-//obj.showDetail();
+//vobj.showDetail();
 obj.showDetailArrow();
+
+
 
 
