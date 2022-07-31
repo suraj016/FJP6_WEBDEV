@@ -37,3 +37,5 @@ console.log(teacher);
 
 let student  = new Student ("Suraj", 23,9);
 console.log(student);
+
+
