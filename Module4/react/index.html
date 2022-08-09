@@ -33,9 +33,9 @@
     // JSX  -> javascript + html
 
 
-    function Element1(){
+    function Element1({name = "Aman", age}){   // aman is default value
         return(
-           <h1>Hello comdersssssssss</h1>
+           <h1>Hello  {name} bro and his age is {age}</h1>
 
         )
     }
@@ -50,15 +50,20 @@
     function Parent(){     // reusablity ek he component baar baar use kar liya
         return(
             <div>
-                <Element1/>
+                <Element1 name = "Suraj" age  = "21"/>  
                 <Element2/>
+                <Element1 name  = " aish "/>
+                <Element1/>
+                <Element1 name  = " aishwarya " age = "20"/>
                 <Element1/>
                 </div>
         )
     }
 
+    // prop ek object hota hae jisme jo be cheez ham pass kate hae like name
 
-    ReactDOM.render(<Parent/>,root);   // component element
+
+    ReactDOM.render(<Parent/>,root);   // component element  =  ye code ko push karta hae  
 
 </script>
 </html>
