@@ -23,12 +23,42 @@
 
 class Counter extends React.Component{   // class component bnaya
     constructor(){
-        super();    // properties inherit karne ke liye
+        super();  
+        this.state = {
+            count:0,
+        };
+        // properties inherit karne ke liye
+    }
+
+
+    increment = ()=>{
+        this.setState({
+            count:this.state.count+1,
+        })
+    }
+
+    decrement = ()=>{
+        this.setState({
+            count:this.state.count-1,
+        })
     }
 
     render(){
     return(
-        <h1>Hello world</h1>
+
+    <div>
+
+
+        <h1>{this.state.count}</h1>
+        <button onClick = {this.increment}>+</button>
+        <button onClick = {this.decrement}>-</button>
+
+
+
+
+        </div>
+       
+        
     )
 }
 }
