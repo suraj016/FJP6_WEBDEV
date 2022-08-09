@@ -7,12 +7,15 @@
     <title>Document</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
+<!-- convert jsx code to java script  line no 10 -->
 </head>
 <body>
     <div id = "root"></div>
 </body>
 <script  type="text/babel">
+
+    
     // let ele = document.createElement("h1");
     // ele.innerText = "Hello comder";
      let root  = document.querySelector("#root");
@@ -30,15 +33,32 @@
     // JSX  -> javascript + html
 
 
-    function Element(){
+    function Element1(){
         return(
            <h1>Hello comdersssssssss</h1>
 
         )
     }
 
+    function Element2(){
+        return(
+           <h2>Hello </h2>
 
-    ReactDOM.render(<Element/>,root);
+        )
+    }
+
+    function Parent(){     // reusablity ek he component baar baar use kar liya
+        return(
+            <div>
+                <Element1/>
+                <Element2/>
+                <Element1/>
+                </div>
+        )
+    }
+
+
+    ReactDOM.render(<Parent/>,root);   // component element
 
 </script>
 </html>
