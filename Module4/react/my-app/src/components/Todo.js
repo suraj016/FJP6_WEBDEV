@@ -4,7 +4,8 @@ class Todo extends Component{
     constructor(){
         super();
         this.state = {
-            task:["Learn JS", "Learn DODM", "Learn React"]
+            task:["Learn JS", "Learn DODM", "Learn React", "Learn Frontend"],
+            currTask:""
         }
     }
     render(){
@@ -12,12 +13,12 @@ class Todo extends Component{
 
         <div>
 
-<input type="text" />
+<input type="text"  value = {this.state.currTask}/>
        <button>Add Task</button>
 
 
        <ul>
-      {this.state.tasks.map((ele) =>(
+      {this.state.task.map((ele) =>(
         <li>
             <p>{ele}</p>    
         </li>
@@ -31,6 +32,8 @@ class Todo extends Component{
 
 // jsx mae loop nhi lga sakte
 // map fingers
+// filter
+//reduce
 
 
 
