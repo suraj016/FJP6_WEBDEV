@@ -1,6 +1,12 @@
 import { Component } from "react";
 
 class Todo extends Component{
+    constructor(){
+        super();
+        this.state = {
+            task:["Learn JS", "Learn DODM", "Learn React"]
+        }
+    }
     render(){
        return(
 
@@ -11,14 +17,20 @@ class Todo extends Component{
 
 
        <ul>
-        <li>Task 1</li>
-        <li>Task 2</li>
+      {this.state.tasks.map((ele) =>(
+        <li>
+            <p>{ele}</p>    
+        </li>
+      ))}
        </ul>
         </div>
       
        )
     }
 }
+
+// jsx mae loop nhi lga sakte
+// map fingers
 
 
 
