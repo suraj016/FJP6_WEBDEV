@@ -1,10 +1,11 @@
 import { Component } from "react";
 
+
 class Todo extends Component{
     constructor(){
         super();
         this.state = {
-            task:["Learn JS", "Learn DODM", "Learn React", "Learn Frontend"],
+            task:[],
             currTask:""
         }
 
@@ -22,11 +23,22 @@ class Todo extends Component{
 
     handleAddTask = () =>{
    this.setState({
-    task:[...this.state.task,this.state.currTask],
+    task:[...this.state.task,{task:this.state.currTask,id:this.state.task.length+1}],
     currTask:""
    })
 
 
+    }
+
+
+    handleDelete = (id) =>{
+        let narr = this.state.task.filter((taskObj)=>{
+            return taskObj.id!= id
+        })
+        this.setState({
+            task:[...narr]
+        })
+        
     }
 
 
@@ -40,10 +52,10 @@ class Todo extends Component{
 
 
        <ul>
-      {this.state.task.map((ele) =>(
-        <li>
-            <p>{ele}</p>   
-            <button>Delete</button> 
+      {this.state.task.map((taskObj) =>(
+        <li key = {taskObj.id}>
+            <p>{taskObj.task}</p>   
+            <button onClick={()=>this.handleDelete(taskObj.id)}>Delete</button> 
         </li>
       ))}
        </ul>
