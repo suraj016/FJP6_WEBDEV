@@ -102,3 +102,14 @@ font-style: italic;
   left: 5vw;
 }
 
+.text-centre{
+  align-items: center;
+}
+
+.movies-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+
