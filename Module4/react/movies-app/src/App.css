@@ -113,3 +113,24 @@ font-style: italic;
   padding: 1rem;
 }
 
+
+.movie-card{
+  position: relative;
+  width: 20vw;
+  margin: 1rem;
+  color: black;
+}
+
+.movie-title{
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  font-size: large;
+
+}
+
+/* .movies-button{
+  position: absolute;
+   bottom: 2rem;
+} */
+

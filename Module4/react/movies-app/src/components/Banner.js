@@ -1,8 +1,10 @@
 import { Component } from "react";
+import {movies} from "../movieData";
 
 
 class Banner extends Component {
     render() {
+        let backdrop_Path = movies.results[0].backdrop_path;
         return (
             <div className="card banner-card" >
                 <img src="https://sm.ign.com/ign_in/review/m/marvels-sp/marvels-spider-man-miles-morales-review_fkqf.jpg" className="card-img-top banner-img" alt="..."/>
