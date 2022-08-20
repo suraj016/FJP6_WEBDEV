@@ -84,8 +84,9 @@ font-style: italic;
 }
 
 .banner-img{
-  width: 99%;
+  width: 98%;
   height: 70vh;
+  margin-left: 0.7rem;
 }
 
 .banner-title{
@@ -132,6 +133,6 @@ font-style: italic;
  .movies-button{
   position: absolute;
    bottom: 2rem;
-   color: #61dafb;
+   color: purple
 } 
 

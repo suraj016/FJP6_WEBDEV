@@ -4,14 +4,16 @@ import {movies} from "../movieData";
 
 class Banner extends Component {
     render() {
-        let backdrop_Path = movies.results[0].backdrop_path;
-        console.log(backdrop_Path);
+        let movie = movies.results[0];
+        let backdrop_path = movie.backdrop_path;
+       // console.log(backdrop_Path);
         return (
             <div className="card banner-card" >
-                <img src="https://sm.ign.com/ign_in/review/m/marvels-sp/marvels-spider-man-miles-morales-review_fkqf.jpg" className="card-img-top banner-img" alt="..."/>
+                <img src={`https://image.tmdb.org/t/p/original${backdrop_path}`} className="card-img-top banner-img" alt="..."/>
                    
-                        <h1 className="card-title banner-title">Spider man no way home</h1>
-                        <p className="card-text banner-text">Spider-Man: No Way Home is a 2021 American superhero film based on the Marvel Comics character Spider-Man, co-produced by Columbia Pictures and Marvel Studios and distributed by Sony Pictures Releasing. I</p>
+                        <h1 className="card-title banner-title">{movie.title}</h1>
+                        <p className="card-text banner-text">{movie.overview}</p>
+
                         
                       
                     
