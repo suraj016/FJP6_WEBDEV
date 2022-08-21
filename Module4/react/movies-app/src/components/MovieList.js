@@ -4,6 +4,15 @@ import {movies} from "../movieData";
 
 
 class MovieList extends Component{
+   constructor(){
+      super();
+      this.state={
+         hover:""
+      }
+   }
+
+
+
     render(){
        let moviesArr =   movies.results
 
@@ -18,12 +27,15 @@ class MovieList extends Component{
              {moviesArr.map((movieEle) => {
 
                 return(
-                    <div className="card movie-card">
+                    <div className="card movie-card" onMouseEnter={()=>this.setState({hover:movieEle.id})}  onMouseLeave={()=>this.setState({hover:""})}>
                     <img src={`https://image.tmdb.org/t/p/original${movieEle.backdrop_path}`} style = {{heigth: '40vh', width: '20vw'}} className="card-img-top movie-img" alt="..."/>
                     
                       <h5 className="card-title movie-title">{movieEle.title}</h5>
+                    
+                    
                    <div style= {{display: 'flex', justifyContent: 'center'}}>
-                   <a href="#" type="button" class="btn btn-primary movies-button">Add to favourites</a>
+                   {this.state.hover == movieEle.id && ( <a href="#" type="button" class="btn btn-primary movies-button">Add to favourites</a>)}
+
                    </div>
                   </div>
                 )
