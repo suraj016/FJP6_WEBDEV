@@ -4,7 +4,7 @@ import {movies} from "../movieData";
 
 class Banner extends Component {
     render() {
-        let movie = movies.results[0];
+        let movie = movies.results[Math.floor(Math.random() * 10)];
         let backdrop_path = movie.backdrop_path;
        // console.log(backdrop_Path);
         return (
