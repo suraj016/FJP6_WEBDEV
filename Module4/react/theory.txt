@@ -1,1 +1,24 @@
-                                                   LIFE CYCLE METHOD
+                                                   LIFE CYCLE METHOD 
+     1. MOUNTING  - when a component get added to dom.
+         Parts of mounting - 
+         constructor - isme state iniatilize karte hae
+         render() - jitna be output hae basically jsx hae who dom tak leke jaega
+         componentdidMount() -  The componentDidMount() method allows us to execute the React code when the component is already placed in the DOM (Document Object Model). This method is called during the Mounting phase of the React Life-cycle i.e after the component is rendered. sirf 1 baar chalega
+
+
+
+
+
+
+
+
+     2. UNMOUNTING - when a component get removed from dom.
+      
+
+     
+     3. UPDATING - when the component state gets changed     
+      render  - re-render - > componentDidMount        
+
+
+    constructor -> render -> componentDidMount -> render(componentdidupdate)->componentDidUnMount 
+       MOUNTING                                      UPDATE                    UNMOUNTING                                
