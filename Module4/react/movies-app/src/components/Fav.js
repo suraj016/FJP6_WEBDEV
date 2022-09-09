@@ -22,11 +22,11 @@ tempArr.push(genreIds[movieobj.genre_ids[0]])
           <div className="col-3">
             <ul className="list-group genre-selector">
 
-                           {
-                                tempArr.map((genre)=>(
-                                    <li className="list-group-item">{genre}</li>
-                                ))
-                            }
+                {
+                   tempArr.map((genre)=>(
+                      <li className="list-group-item">{genre}</li>
+                       ))
+                }
               
              
             </ul>
@@ -60,10 +60,10 @@ tempArr.push(genreIds[movieobj.genre_ids[0]])
                                             <td>{genreIds[movieEle.genre_ids[0]]}</td>
                                             <td>{movieEle.popularity}</td>
                                             <td>{movieEle.vote_average}</td>
-                                            <td><button type="button" className="btn btn-danger">Danger</button></td>
+                                            <td><button type="button" className="btn btn-danger">Damger</button></td>
                                         </tr>
                                     ))
-                                }
+                }
               </tbody>
             </table>
 
@@ -94,3 +94,10 @@ tempArr.push(genreIds[movieobj.genre_ids[0]])
 }
 
 export default Fav;
+
+
+// react router dom
+
+// different url pe different component
+
+// route-> 2 cheez chaiye 1.url  2 
