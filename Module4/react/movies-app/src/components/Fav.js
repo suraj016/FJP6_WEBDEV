@@ -6,7 +6,7 @@ class Fav extends Component {
       <div className="container">
         <div className="row">
           <div className="col-3">
-            <ul class="list-group">
+            <ul class="list-group genre-selector">
               <li class="list-group-item">Favourites</li>
               <li class="list-group-item">Action</li>
               <li class="list-group-item">Drama</li>
@@ -14,7 +14,12 @@ class Fav extends Component {
               <li class="list-group-item">Comedy</li>
             </ul>
           </div>
-          <div className="col-9">columns</div>
+          <div className="col-9 fav-table">
+            <div className="row">
+              <input type="text" className="form-control" placeholder="Search" />
+              <input type="text" className="form-control"/>
+            </div>
+          </div>
         </div>
       </div>
     );
