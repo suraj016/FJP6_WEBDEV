@@ -8,8 +8,9 @@ class Fav extends Component {
       genres: [],
       currgenre: "All genres",
       movies: []
-      // movies2: [],
-      // currText: "",
+      // movies2: []
+      ,
+       currText: '',
     };
   }
 
@@ -45,7 +46,7 @@ class Fav extends Component {
     });
     this.setState({
       movies: [...data],
-     // movies2: [...data],
+    // movies2: [...data],
       genres: [...tempArr],
     });
   }
@@ -69,6 +70,30 @@ filterMovies = ()=>{
       this.setState({
           movies:[...filteredMovies],
          // movies2:[...filteredMovies]
+      })
+  }
+}
+
+handleCurrText = (inputValue)=>{
+  console.log(inputValue)
+  this.setState({
+      currText:inputValue
+  },this.searchMovies)
+}
+
+searchMovies = ()=>{
+  if(this.state.currText != ''){
+      let filteredArr = this.state.movies.filter((movieObj)=>{
+          let title = movieObj.original_title.toLowerCase();
+          return title.includes(this.state.currText.toLowerCase());
+      })
+      this.setState({
+          movies:[...filteredArr]
+      })
+  }else{
+    let data = JSON.parse(localStorage.getItem("movies-app") || '[]');
+      this.setState({
+          movies:[...this.state.movies]
       })
   }
 }
@@ -118,7 +143,7 @@ filterMovies = ()=>{
               <input
                 type="text"
                 className="form-control col"
-                placeholder="Search"
+                placeholder="Search" value = {this.state.currText} onChange={(e)=>this.handleCurrText(e.target.value)}
               />
               <input type="number" className="form-control col" />
             </div>
