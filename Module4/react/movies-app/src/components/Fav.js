@@ -100,6 +100,29 @@ searchMovies = ()=>{
   }
 }
 
+sortRatingDesc = ()=>{
+  let temp = this.state.movies.map((movieObj)=>movieObj);
+  temp.sort(function(objA,objB){
+      return objB.vote_average - objA.vote_average;
+  })
+  this.setState({
+      movies:[...temp],
+      movies2:[...temp]
+  })
+}
+
+
+sortRatingAsc = ()=>{
+  let temp = this.state.movies.map((movieObj)=>movieObj);
+  temp.sort(function(objA,objB){
+      return objA.vote_average - objB.vote_average;
+  })
+  this.setState({
+      movies:[...temp],
+      movies2:[...temp]
+  })
+}
+
   render() {
 
     let genreIds = {
@@ -151,15 +174,23 @@ searchMovies = ()=>{
             </div>
 
             <table className="table">
-              <thead>
-                <tr>
-                  <th scope="col">Title</th>
-                  <th scope="col">Genre</th>
-                  <th scope="col">Popularity</th>
-                  <th scope="col">Rating</th>
-                  <th scope="col">Delete</th>
-                </tr>
-              </thead>
+            <thead>
+                                <tr>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Genre</th>
+                                    <th scope="col" style={{display:"flex",alignItem:"center",justifyContent:"space-evenly"}}>
+                                        <i class="fa fa-sort-up" style={{marginTop:"0.5rem"}} onClick={this.sortPopularityDesc}></i>
+                                         Popularity
+                                        <i class="fa fa-sort-down" onClick={this.sortPopularityAsc}></i>
+                                    </th>
+                                    <th scope="col">
+                                        <i class="fa fa-sort-up" style={{marginTop:"0.5rem"}} onClick={this.sortRatingDesc}></i>
+                                             Rating
+                                        <i class="fa fa-sort-down" onClick={this.sortRatingAsc}></i>
+                                    </th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
               <tbody>
                 {this.state.movies.map((movieEle) => (
                   <tr>
