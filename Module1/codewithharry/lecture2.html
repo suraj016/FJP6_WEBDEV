@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TUTORIAL</title>
+    <link rel="stylesheet" href="lecture2.css">
+    <style>
+        p{
+            color: grey;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, ipsam?</h3>
+     <!-- <p style="color: red; background-color: yellow;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ullam praesentium ipsum! Perspiciatis, delectus voluptas.</p> -->
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ullam praesentium ipsum! Perspiciatis, delectus voluptas.</p>
+</body>
+</html>
+
+
+<!-- Within these three ( Inline, Internal & External ) the priority order is first Inline, then Internal and last priority is given to external styles. This is the biggest advantage as we can override the global style property and define them locally. Let us start learning each of these three types of CSS.
+
+!important (this is a bit hackish though but it is the only way to override an inline style. Try to avoid using this unless really necessary). Example: p {color: blue !important; }
+
+Inline, such as <p class="redText" style="color: red;">CSS is awesome</p>.In this example, the class is ignored if the redText class declaration has already tried to define the property of color:. Other properties can still be honored though.
+
+Internal styles - those written inside the <head><style> section of an html page.
+
+ external stylesheet which defines styles. Your html document must have a link to this sheet in order to use it. Example, again inside the <head> section is: <link rel="stylesheet" type="text/css" href="mystyle.css" /> */
+
+
+     Specificity Hierarchy
+Every CSS selector has its place in the specificity hierarchy.
+
+There are four categories which define the specificity level of a selector:
+
+Inline styles - Example: <h1 style="color: pink;">
+IDs - Example: #navbar
+Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+Elements and pseudo-elements - Example: h1, ::before  -->
