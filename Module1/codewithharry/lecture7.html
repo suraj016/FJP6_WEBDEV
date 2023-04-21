@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BOX MODEL MARGING AND PADDING</title>
+    <style>
+      .container{
+        background-color: burlywood;
+        border: 3px solid rgb(151, 14, 14);
+        /* padding: 100px; */
+        /* padding/margin -> top right bottom left */
+        padding: 30px 50px 110px 90px;
+        margin:  14px 50px;
+        border-radius: 23px;
+        width: 233px;
+        box-sizing: border-box;
+
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>this is my heading</h3>
+        <p id="first"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum itaque aliquid nisi blanditiis aspernatur maxime omnis perferendis illo at.</p>
+    </div>
+    <div class="container">
+        <h3>this is my heading</h3>
+        <p id="second"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum itaque aliquid nisi blanditiis aspernatur maxime omnis perferendis illo at.</p>
+    </div>
+    <div class="container">
+        <h3>this is my heading</h3>
+        <p id="third"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum itaque aliquid nisi blanditiis aspernatur maxime omnis perferendis illo at.</p>
+    </div>
+
+
+    
+</body>
+</html>
+
+
+
+BOX MODEL
+
+The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. It is used to create the design and layout of web pages. It can be used as a toolkit for customizing the layout of different elements. The web browser renders every element as a rectangular box according to the CSS box model. Box-Model has multiple properties in CSS. Some of them are given below: 
+
+content: This property is used to displays the text, images, etc, that can be sized using the width & height property.
+padding: This property is used to create space around the element, inside any defined border.
+border: This property is used to cover the content & any padding, & also allows to set the style, color, and width of the border.
+margin: This property is used to create space around the element ie., around the border area.
