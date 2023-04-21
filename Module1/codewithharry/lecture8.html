@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOAT AND CLEAR /ALIGNMENT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@700&family=Poppins:wght@100;200;300;400&family=Raleway:ital@1&display=swap" rel="stylesheet">
+    <style>
+        *{
+             /* box-sizing: border-box; */
+        }
+        body{
+            font-family: 'Poltawski Nowy', serif;
+             font-family: 'Poppins', sans-serif;
+             font-family: 'Raleway', sans-serif;
+        }
+        .container{
+            width: 900px;
+            border: 3px solid rgb(41, 2, 41);
+            /* border-left: 5px solid red; */
+            /* margin: auto; */
+        }
+        .items{
+          border: 3px solid grey;
+          margin: 12px 12px;
+          padding: 10px 12px;
+          background-color: aqua;
+         
+        }
+        #fruits{
+          float: left;
+          width: 100px;
+        }
+        #computer{
+            float: right;
+          width: 100px;
+        }
+        #stationary{
+            float: left;
+          width: 50%;
+        }
+        /* .newcont{
+            background-color: brown;
+            border: 10px solid green;
+        } */
+        p{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div id="fruits" class="items">
+            <h3>Fruits</h3>
+            <p id="fruitspara" class="para">
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea autem voluptatem, odio ex aliquam, iusto, asperiores quos a nisi voluptatibus reiciendis earum ut tempora!
+            </p>
+         </div>
+         <div id="computer" class="items">
+            <h3>computer</h3>
+            <p id="fruitspara" class="para">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis deleniti recusandae minus ratione, quos corporis itaque nobis possimus, earum maxime quidem repellat. Dolorum, labore!
+            </p>
+         </div>
+         <div id="stationary" class="items">
+            <h3>stationary</h3>
+            <p id="fruitspara" class="para">
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae non qui culpa neque quaerat, est, quia velit iusto quam, cupiditate quidem aspernatur quis itaque?
+            </p>
+         </div>
+    </div>
+
+    <!-- <div class="newcont">
+        <h1>hii</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quod? Harum voluptatem est, debitis tempora, praesentium sit, modi quisquam commodi ipsum sint pariatur.</p>
+    </div> -->
+</body>
+</html>
+
+
+<!-- CSS Float is a positioning property in css used to float an element to the left or right corner of parent element and the next element or text wrapping around the left or right to it . A floating element doesn't occupy space in normal flow. Thus we have to use clear both after last floating element to avoid wrapping.
+
+By default, all html elements are non floating. -->
