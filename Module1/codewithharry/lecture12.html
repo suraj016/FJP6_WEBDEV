@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS POSITIONING</title>
+    <style>
+       /* 1. position
+       2. static(default)
+       3. absolute
+       4. relative
+       5 fixed
+       6. sticky */
+
+       .container{
+        border: 2px solid red;
+        background-color: khaki;
+       }
+        .box{
+            display: inline-block;
+            border: 5px solid red;
+            width: 200px;
+            height: 200px;
+           
+            margin: 5px;
+            box-sizing: border-box;
+        }
+        #box3{
+            /* relative to its normal position and leave a gap */
+            /* position: relative;
+            top: 34px;
+            left: 34px; */
+
+
+
+           /* relative to its parent position */
+            position: absolute;
+            top: 34px;
+            left: 34px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+   
+</body>
+</html>
+
+
+Static: This method of positioning is set by default. If we don’t mention the method of positioning for any element, the element has the position: static method by default. By defining Static, the top, right, bottom and left will not have any control over the element. The element will be positioned with the normal flow of the page.
+
+Relative: An element with position: relative is positioned relatively with the other elements which are sitting at top of it. If we set its top, right, bottom, or left, other elements will not fill up the gap left by this element. An element with its position set to relative and when is adjusted using top , bottom ,left, right will be positioned relative to its original position.
+
+
+Absolute: An element with position: absolute will be positioned with respect to its nearest Non-static ancestor. The positioning of this element does not depend upon its siblings or the elements which are at the same level.
+
+Sticky: Element with position: sticky and top: 0 played a role between fixed & relative based on the position where it is placed. If the element is placed at the middle of the document then when the user scrolls the document, the sticky element starts scrolling until it touches the top. When it touches the top, it will be fixed at that place in spite of further scrolling. We can stick the element at the bottom, with the bottom property.

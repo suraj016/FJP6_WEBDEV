@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viziblity and z-index</title>
+    <style>
+        .box{
+            width: 170px;
+            height: 170px;
+            border: 2px solid red;
+           
+        }
+        #box1{
+            background-color: green;
+            position: relative;
+            z-index: 13233;
+        }
+        #box2{
+            background-color: rgb(27, 2, 8);
+            position: relative;
+            /* display: none;
+            visibility: hidden; */
+            z-index: -1;
+        }
+        #box3{
+            background-color: rgb(35, 17, 96);
+        }
+        #box4{
+            background-color: rgb(235, 58, 27);
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">4</div>
+</body>
+</html>
+
+z index will work only for relative absolute fixed
+z index kam ye karti ahe ke agar ek box ke upar dusra box aajaye tho upar kon sa rehega
+
+What is the Z index in CSS?
+The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order.

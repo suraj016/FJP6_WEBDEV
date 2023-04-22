@@ -7,16 +7,28 @@
     <title>DISPLAY PROPERTY</title>
     <style>
         header{
-            margin: auto;
-            border: 3px solid red;
-            width: 18%;
-        }
+          
+             border: 3px solid red;
+           
+            
+        } 
         img{
             width: 35px;
             margin: auto;
+            display: block;
         }
         h3{
             margin: 0px;
+            text-align: center;
+        }
+        .box{
+            border: 12px solid green;
+            background-color: grey;
+            margin: 4px;
+            padding: 0px;
+            display: inline-block;
+            width: 30%;
+            box-sizing: border-box;
         }
 
     </style>
@@ -26,5 +38,211 @@
         <img src="./images/codewithharry.jpeg" alt="images">
         <h1>welcome to harry blogs</h1>
        </header>
+
+      <div class="container">
+        <div class="box"> 
+            <h4 class="heading">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est veritatis beatae fugiat odio sit perspiciatis, hic eaque accusantium sapiente nemo eius laborum labore optio quia nihil vero animi rerum minus voluptatibus cum error! Nihil.</p>
+            </h4>
+        </div>
+        <div class="box"> 
+            <h4 class="heading">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est veritatis beatae fugiat odio sit perspiciatis, hic eaque accusantium sapiente nemo eius laborum labore optio quia nihil vero animi rerum minus voluptatibus cum error! Nihil.</p>
+            </h4>
+        </div>
+        <div class="box"> 
+            <h4 class="heading">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est veritatis beatae fugiat odio sit perspiciatis, hic eaque accusantium sapiente nemo eius laborum labore optio quia nihil vero animi rerum minus voluptatibus cum error! Nihil.</p>
+            </h4>
+        </div>
+      </div>
 </body>
 </html>
+
+
+CSS Display
+CSS display is the most important property of CSS which is used to control the layout of the element. It specifies how the element is displayed.
+
+Every element has a default display value according to its nature. Every element on the webpage is a rectangular box and the CSS property defines the behavior of that rectangular box.
+
+CSS Display default properties
+default value	inline
+inherited	no
+animation supporting	no
+version	css1
+javascript syntax	object.style.display="none"
+Syntax
+display:value;  
+CSS display values
+There are following CSS display values which are commonly used.
+
+display: inline;
+display: inline-block;
+display: block;
+display: run-in;
+display: none;
+1) CSS display inline
+The inline element takes the required width only. It doesn't force the line break so the flow of text doesn't break in inline example.
+Pause
+
+Next
+Unmute
+Current TimeÂ 
+0:24
+/
+DurationÂ 
+18:10
+Loaded: 7.34%
+Â 
+Fullscreen
+
+The inline elements are:
+
+<span>
+<a>
+<em>
+<b> etc.
+Let's see an example of CSS display inline.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+p {  
+display: inline;   
+}  
+</style>  
+</head>  
+<body>  
+<p>Hello Javatpoint.com</p>  
+<p>Java Tutorial.</p>  
+<p>SQL Tutorial.</p>  
+<p>HTML Tutorial.</p>  
+<p>CSS Tutorial.</p>  
+</body>  
+</html>   
+Test it Now
+Output:
+
+Hello Javatpoint.com Java Tutorial. SQL Tutorial. HTML Tutorial. CSS Tutorial.
+
+2) CSS display inline-block
+The CSS display inline-block element is very similar to inline element but the difference is that you are able to set the width and height.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+p {  
+display: inline-block;   
+}  
+</style>  
+</head>  
+<body>  
+<p>Hello Javatpoint.com</p>  
+<p>Java Tutorial.</p>  
+<p>SQL Tutorial.</p>  
+<p>HTML Tutorial.</p>  
+<p>CSS Tutorial.</p>  
+</body>  
+</html>  
+Test it Now
+Output:
+
+Hello Javatpoint.com Java Tutorial. SQL Tutorial. HTML Tutorial. CSS Tutorial.
+
+3) CSS display block
+The CSS display block element takes as much as horizontal space as they can. Means the block element takes the full available width. They make a line break before and after them.
+
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+p {  
+display: block;   
+}  
+</style>  
+</head>  
+<body>  
+<p>Hello Javatpoint.com</p>  
+<p>Java Tutorial.</p>  
+<p>SQL Tutorial.</p>  
+<p>HTML Tutorial.</p>  
+<p>CSS Tutorial.</p>  
+</body>  
+</html>  
+Test it Now
+Output:
+
+Hello Javatpoint.com
+
+Java Tutorial.
+
+SQL Tutorial.
+
+HTML Tutorial.
+
+
+CSS Tutorial.
+
+
+4) CSS display run-in
+This property doesn't work in Mozilla Firefox. These elements don't produce a specific box by themselves.
+
+If the run-in box contains a bock box, it will be same as block.
+If the block box follows the run-in box, the run-in box becomes the first inline box of the block box.
+If the inline box follows the run-in box, the run-in box becomes a block box.
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+p {  
+display: run-in;   
+}  
+</style>  
+</head>  
+<body>  
+<p>Hello Javatpoint.com</p>  
+<p>Java Tutorial.</p>  
+<p>SQL Tutorial.</p>  
+<p>HTML Tutorial.</p>  
+<p>CSS Tutorial.</p>  
+</body>  
+</html>  
+Test it Now
+Output:
+
+Hello Javatpoint.com
+
+Java Tutorial.
+
+SQL Tutorial.
+
+HTML Tutorial.
+
+CSS Tutorial.
+
+5) CSS display none
+The "none" value totally removes the element from the page. It will not take any space.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+h1.hidden {  
+    display: none;  
+}  
+</style>  
+</head>  
+<body>  
+<h1>This heading is visible.</h1>  
+<h1 class="hidden">This is not visible.</h1>  
+<p>You can see that the hidden heading does not contain any space.</p>  
+</body>  
+</html>  
+Test it Now
+Output:
+
+This heading is visible.
+You can see that the hidden heading does not contain any space.
